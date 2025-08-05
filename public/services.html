@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Services - Aurai Solutions</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Figtree', sans-serif; }
+        .modal-backdrop { backdrop-filter: blur(8px); }
+    </style>
+</head>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68776deb3090ca19169f82c1/1j098aoba';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<body class="bg-white" x-data="{ openModal: null, mobileNavOpen: false }">
+    
+    <!-- Navigation Header -->
+     <header class="bg-white shadow-sm sticky top-0 z-40">
+        <nav class="mx-4 py-6 border-b">
+            <div class="container mx-auto px-4">
+                <div class="relative flex items-center justify-between">
+                    <!-- Logo -->
+                    <a class="inline-block" href="index.html">
+                        <div class="flex items-center">
+                            <span class="text-2xl font-bold text-teal-900">Aurai</span>
+                            <span class="text-2xl font-bold text-red-500">.</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Desktop Navigation -->
+                    <ul class="hidden md:flex items-center space-x-8">
+                        <li>
+                            <a class="text-teal-900 hover:text-teal-700 font-medium transition duration-200" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-teal-900 hover:text-teal-700 font-medium transition duration-200" href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="text-teal-900 hover:text-teal-700 font-medium transition duration-200" href="pricing.html">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="text-teal-900 hover:text-teal-700 font-medium transition duration-200" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Mobile Navigation Toggle -->
+                    <button class="md:hidden text-teal-900 hover:text-teal-800 transition" 
+                            @click="mobileNavOpen = !mobileNavOpen; $event.stopPropagation()">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.2 23.2H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M5.2 16H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M5.2 8.8H26.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- Mobile Navigation Menu -->
+                    <div x-show="mobileNavOpen" 
+                         x-transition:enter="transition ease-out duration-200"
+                         x-transition:enter-start="opacity-0 transform -translate-y-2"
+                         x-transition:enter-end="opacity-100 transform translate-y-0"
+                         x-transition:leave="transition ease-in duration-150"
+                         x-transition:leave-start="opacity-100 transform translate-y-0"
+                         x-transition:leave-end="opacity-0 transform -translate-y-2"
+                         class="absolute top-full left-0 w-full bg-white shadow-lg border-t md:hidden z-30"
+                         @click.outside="mobileNavOpen = false">
+                        <ul class="py-4">
+                            <li><a class="block px-6 py-3 text-teal-900 hover:text-teal-700 hover:bg-gray-50 font-medium transition" href="index.html">Home</a></li>
+                            <li><a class="block px-6 py-3 text-teal-900 hover:text-teal-700 hover:bg-gray-50 font-medium transition" href="services.html">Services</a></li>
+                            <li><a class="block px-6 py-3 text-teal-900 hover:text-teal-700 hover:bg-gray-50 font-medium transition" href="pricing.html">Pricing</a></li>
+                            <li><a class="block px-6 py-3 text-teal-900 hover:text-teal-700 hover:bg-gray-50 font-medium transition" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="pt-16 pb-24 px-5 xs:px-8 xl:px-12 bg-gradient-to-br from-white to-gray-50">
+            <div class="container mx-auto px-4">
+                <!-- Section Badge -->
+                <div class="flex mb-6 items-center justify-center md:justify-start">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4" r="4" fill="#022C22" />
+                    </svg>
+                    <span class="ml-3 text-sm font-medium text-gray-700 uppercase tracking-wide">What are the Services we offer?</span>
+                </div>
+                
+                <!-- Main Heading -->
+                <div class="border-t border-teal-900 border-opacity-25 pt-14">
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl mb-8 text-teal-900 leading-tight text-center md:text-left">
+                        Key to an AI driven future
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-16 max-w-2xl text-center md:text-left">
+                        Transform your business with our comprehensive AI and automation solutions designed to drive growth, efficiency, and innovation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-16 px-5 xs:px-8 xl:px-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
+                    
+                    <template x-for="(service, index) in [
+                        {
+                            key: 'automation',
+                            title: 'Business Process Automation',
+                            description: 'Smart Appointment Scheduling<br>Automated Invoicing & Payments<br>Workflow Optimization',
+                            icon: `<svg class='w-12 h-12 text-teal-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014.846 17H9.154a3.374 3.374 0 00-1.154-.547l-.548-.547z'></path>
+                            </svg>`,
+                            details: `<ul class='list-disc list-inside text-gray-700 text-sm space-y-3'>
+                                <li><strong>Smart Appointment Scheduling:</strong> Automated booking systems that manage appointments, reduce no-shows, and optimize calendar utilization with intelligent scheduling algorithms.</li>
+                                <li><strong>Automated Invoicing & Payments:</strong> Streamlined billing processes that generate invoices, track payments, send automated reminders, and integrate with accounting systems.</li>
+                                <li><strong>Workflow Optimization:</strong> Custom automation solutions that eliminate repetitive tasks, reduce human errors, and dramatically increase operational efficiency.</li>
+                            </ul>
+                            <div class='mt-4 p-4 bg-teal-50 rounded-lg'>
+                                <p class='text-gray-700 text-sm'><strong>Why Choose This:</strong> Free up valuable time for your team to focus on strategic growth initiatives and customer success while our automation handles routine operations seamlessly.</p>
+                            </div>`
+                        },
+                        {
+                            key: 'webdev',
+                            title: 'Custom Web Development',
+                            description: 'AI-powered E-commerce Websites<br>Custom Business Websites<br>CRM Integration & Optimization',
+                            icon: `<svg class='w-12 h-12 text-orange-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'></path>
+                            </svg>`,
+                            details: `<ul class='list-disc list-inside text-gray-700 text-sm space-y-3'>
+                                <li><strong>AI-powered E-commerce:</strong> Next-generation online stores with intelligent product recommendations, dynamic pricing, personalized shopping experiences, and automated inventory management.</li>
+                                <li><strong>Custom Business Websites:</strong> Bespoke websites tailored to your brand identity, featuring responsive design, SEO optimization, and conversion-focused user experiences.</li>
+                                <li><strong>CRM Integration:</strong> Seamlessly connect your website with customer relationship management systems for efficient lead capture, nurturing, and conversion tracking.</li>
+                                <li><strong>Performance Optimization:</strong> Lightning-fast loading times, mobile-first design, and smooth user experiences that drive engagement and conversions.</li>
+                                <li><strong>Content Management:</strong> User-friendly WordPress solutions and custom CMS platforms that give you full control over your digital presence.</li>
+                            </ul>`
+                        },
+                        {
+                            key: 'chatbot',
+                            title: 'AI Chatbot Integration',
+                            description: '24/7 Customer Support Bots<br>AI Sales & Lead Generation<br>Multi-Platform Integration',
+                            icon: `<svg class='w-12 h-12 text-blue-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z'></path>
+                            </svg>`,
+                            details: `<ul class='list-disc list-inside text-gray-700 text-sm space-y-3'>
+                                <li><strong>24/7 Customer Support:</strong> Intelligent chatbots that provide instant responses, resolve common queries, escalate complex issues to humans, and maintain conversation context.</li>
+                                <li><strong>Sales & Lead Generation:</strong> AI-powered conversational agents that qualify prospects, guide customers through sales funnels, and capture valuable lead information.</li>
+                                <li><strong>Product Recommendations:</strong> Smart recommendation engines that analyze customer behavior and preferences to suggest relevant products and increase conversion rates.</li>
+                                <li><strong>Multi-Platform Integration:</strong> Seamless deployment across WhatsApp, Facebook Messenger, website chat, SMS, and other communication channels for unified customer experience.</li>
+                            </ul>
+                            <div class='mt-4 p-4 bg-blue-50 rounded-lg'>
+                                <p class='text-gray-700 text-sm'><strong>ROI Impact:</strong> Reduce response times by 90%, increase lead capture by 300%, and provide consistent customer service around the clock.</p>
+                            </div>`
+                        },
+                        {
+                            key: 'crm',
+                            title: 'AI-Powered CRM Solutions',
+                            description: 'Comprehensive CRM Training<br>Automated Sales Pipelines<br>Multi-Channel Communication',
+                            icon: `<svg class='w-12 h-12 text-red-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'></path>
+                            </svg>`,
+                            details: `<ul class='list-disc list-inside text-gray-700 text-sm space-y-3'>
+                                <li><strong>Comprehensive CRM Training:</strong> Hands-on training programs that equip your team with advanced CRM skills, best practices, and strategies for maximum system utilization.</li>
+                                <li><strong>Automated Sales & Support:</strong> AI-driven workflows integrated directly into your CRM system for automated lead scoring, follow-ups, and customer journey optimization.</li>
+                                <li><strong>Advanced Lead Nurturing:</strong> Sophisticated AI algorithms that analyze customer behavior patterns and implement personalized nurturing strategies to maximize conversion rates.</li>
+                                <li><strong>Multi-Channel Communication:</strong> Unified communication hub enabling WhatsApp, Email, SMS, and social media interactions directly through your CRM platform.</li>
+                            </ul>
+                            <div class='mt-4 p-4 bg-red-50 rounded-lg'>
+                                <p class='text-gray-700 text-sm'><strong>Business Impact:</strong> Increase sales team productivity by 60%, improve lead conversion rates by 45%, and achieve complete visibility into your sales pipeline.</p>
+                            </div>`
+                        }
+                    ]" :key="index">
+                        <div class="relative group">
+                            <!-- Service Content (without card styling) -->
+                            <div class="p-8">
+                                <!-- Icon -->
+                                <div class="mb-6" x-html="service.icon"></div>
+                                
+                                <!-- Content -->
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-4 text-teal-900" x-text="service.title"></h3>
+                                    <div class="mb-6 text-gray-600 leading-relaxed" x-html="service.description"></div>
+                                    
+                                    <!-- CTA Button -->
+                                    <button class="inline-flex items-center text-lg font-semibold text-teal-700 hover:text-teal-900 transition-colors cursor-pointer group"
+                                            @click="openModal = openModal === service.key ? null : service.key">
+                                        Learn More
+                                        <svg class="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Modal Overlay -->
+                            <div x-show="openModal === service.key" 
+                                 x-transition:enter="transition ease-out duration-300"
+                                 x-transition:enter-start="opacity-0"
+                                 x-transition:enter-end="opacity-100"
+                                 x-transition:leave="transition ease-in duration-200"
+                                 x-transition:leave-start="opacity-100"
+                                 x-transition:leave-end="opacity-0"
+                                 class="fixed inset-0 bg-black bg-opacity-50 modal-backdrop z-50 flex items-center justify-center p-4"
+                                 @click="openModal = null">
+                                
+                                <!-- Modal Content -->
+                                <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+                                     @click.stop>
+                                    <div class="p-8">
+                                        <!-- Close Button -->
+                                        <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                                                @click="openModal = null">
+                                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                            </svg>
+                                        </button>
+                                        
+                                        <!-- Modal Header -->
+                                        <div class="mb-6">
+                                            <div class="mb-4" x-html="service.icon"></div>
+                                            <h3 class="text-3xl font-bold text-gray-800 mb-2" x-text="service.title"></h3>
+                                            <p class="text-gray-500">Detailed overview and benefits</p>
+                                        </div>
+                                        
+                                        <!-- Modal Body -->
+                                        <div class="text-gray-700 leading-relaxed space-y-4" x-html="service.details"></div>
+                                        
+                                        <!-- Modal Footer -->
+                                        <div class="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row gap-4">
+                                            <a href="contact.html" class="flex-1 bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition-colors text-center font-medium">
+                                                Get Started Today
+                                            </a>
+                                            <button @click="openModal = null" class="flex-1 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium">
+                                                Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-20 bg-gradient-to-r from-teal-600 to-teal-800">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                    Ready to Transform Your Business?
+                </h2>
+                <p class="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+                    Join hundreds of businesses that have already revolutionized their operations with our AI-powered solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-teal-700 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
+                        Start Your Journey
+                    </a>
+                    <a href="pricing.html" class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-teal-700 transition-colors font-semibold text-lg">
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="py-12 lg:py-16 bg-orange-50 overflow-hidden">
+        <div class="max-w-7xl px-6 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <h2 class="font-bold text-gray-800 text-xl mb-4">Aurai<span class="text-red-500">.</span></h2>
+                    <p class="text-gray-600 text-sm mb-4">Transforming businesses through intelligent automation and AI-powered solutions. Your partner in digital innovation.</p>
+                    
+                    <div class="space-y-2 text-sm">
+                        <p><span class="font-semibold text-gray-700">Phone:</span> <a href="tel:+254794018685" class="text-gray-600 hover:text-orange-600 transition">+254 794 018 685</a></p>
+                        <p><span class="font-semibold text-gray-700">Email:</span> <a href="mailto:info@aurai.co.ke" class="text-red-600 hover:text-orange-600 transition">info@aurai.co.ke</a></p>
+                        <p><span class="font-semibold text-gray-700">Address:</span> <span class="text-gray-600">Nairobi, Kenya</span></p>
+                        <p><span class="font-semibold text-gray-700">Hours:</span> <span class="text-gray-600">Mon-Fri 8AM-6PM EAT</span></p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="lg:col-span-1">
+                    <h3 class="font-bold text-gray-800 text-lg mb-4 border-b border-red-500 inline-block">Quick Links</h3>
+                    <ul class="space-y-2 mt-2 text-sm">
+                        <li><a href="index.html" class="text-gray-600 hover:text-orange-600 transition font-medium">› Home</a></li>
+                        <li><a href="index.html#about-us-section" class="text-gray-600 hover:text-orange-600 transition font-medium">› About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-600 hover:text-orange-600 transition font-medium">› Portfolio</a></li>
+                        <li><a href="blog.html" class="text-gray-600 hover:text-orange-600 transition font-medium">› Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-orange-600 transition font-medium">› Contact Us</a></li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-orange-600 transition font-medium">› Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="lg:col-span-1">
+                    <h3 class="font-bold text-gray-800 text-lg mb-4 border-b border-red-500 inline-block">Our Services</h3>
+                    <ul class="space-y-2 mt-2 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Business Process Automation</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Custom Web Development</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› AI Chatbot Integration</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› AI-powered CRM Solutions</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Digital Strategy Consulting</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Technical Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Industries & Resources -->
+                <div class="lg:col-span-1">
+                    <h3 class="font-bold text-gray-800 text-lg mb-4 border-b border-red-500 inline-block">Industries</h3>
+                    <ul class="space-y-2 mt-2 text-sm mb-6">
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Healthcare</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Finance & Banking</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Retail & E-commerce</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Education</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition font-medium">› Manufacturing</a></li>
+                    </ul>
+                    
+                    <h4 class="font-semibold text-gray-700 text-sm mb-2">Resources</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition">› Case Studies</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition">› Whitepapers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-orange-600 transition">› FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Social -->
+                <div class="lg:col-span-1">
+                    <h3 class="font-bold text-gray-800 text-lg mb-4">Stay Connected</h3>
+                    
+                    <!-- Newsletter Signup -->
+                    <div class="mb-6">
+                        <p class="text-sm text-gray-600 mb-3">Subscribe for AI & automation updates.</p>
+                        <form action="#" method="POST" class="space-y-3">
+                            <input type="email" name="newsletter_email" placeholder="Enter your email" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm" />
+                            <button type="submit"
+                                class="w-full px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition duration-200 text-sm font-medium">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div>
+                        <h4 class="font-semibold text-gray-700 text-sm mb-3">Follow Us</h4>
+                        <div class="flex gap-3">
+                            <a href="https://facebook.com/aurai.solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="Facebook">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M13 3h4V0h-4c-2.8 0-5 2.2-5 5v3H5v4h3v9h4v-9h3l1-4h-4V5c0-0.6 0.4-1 1-1z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/aurai_solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="Instagram">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.6.6.3 1.1.7 1.6 1.2.5.5.9 1 1.2 1.6.3.5.5 1.3.6 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.6 2.5-.3.6-.7 1.1-1.2 1.6-.5.5-1 .9-1.6 1.2-.5.3-1.3.5-2.5.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.6-.6-.3-1.1-.7-1.6-1.2-.5-.5-.9-1-1.2-1.6-.3-.5-.5-1.3-.6-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .6-2.5.3-.6.7-1.1 1.2-1.6.5-.5 1-.9 1.6-1.2.5-.3 1.3-.5 2.5-.6C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.4 0-4.6.1-1.1.1-1.7.2-2.1.4-.5.2-.8.4-1.1.8-.3.3-.6.7-.8 1.1-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.5-.1 4.6s0 3.4.1 4.6c.1 1.1.2 1.7.4 2.1.2.5.4.8.8 1.1.3.3.7.6 1.1.8.4.2 1 .3 2.1.4 1.2.1 1.5.1 4.6.1s3.4 0 4.6-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.8-.4 1.1-.8.3-.3.6-.7.8-1.1.2-.4.3-1 .4-2.1.1-1.2.1-1.5.1-4.6s0-3.4-.1-4.6c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.8-.8-1.1-.3-.3-.7-.6-1.1-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.5-.1-4.6-.1zM12 5.8a6.2 6.2 0 1 1 0 12.4 6.2 6.2 0 0 1 0-12.4zm0 10.2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5.8-10.7a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z" />
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/company/aurai-solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="LinkedIn">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM4.5 9h4.9v12h-4.9V9zM14.5 9c-1.65 0-2.48.89-2.92 1.52V9h-4.9v12h4.9v-6.36c0-.9.64-1.64 1.54-1.64.9 0 1.46.74 1.46 1.64V21h4.9v-6.93c0-3.15-1.68-4.6-3.98-4.6z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/aurai_solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="X (Twitter)">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                            </a>
+                            <a href="https://youtube.com/@aurai-solutions" class="text-gray-700 hover:text-orange-600 transition transform hover:scale-110" title="YouTube">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications & Trust Badges -->
+            <div class="mt-12 pt-8 border-t border-gray-300">
+                <div class="flex flex-wrap justify-between items-center gap-6">
+                    <div class="flex flex-wrap gap-6 text-sm text-gray-600">
+                        <span class="flex items-center gap-2">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L13.2 8.6L20 9.5L13.2 10.4L12 17L10.8 10.4L4 9.5L10.8 8.6L12 2Z"/>
+                            </svg>
+                            ISO 27001 Compliant
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            GDPR Compliant
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18,8A6,6 0 0,0 12,2A6,6 0 0,0 6,8H4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8H18M12,4A4,4 0 0,1 16,8H8A4,4 0 0,1 12,4Z"/>
+                            </svg>
+                            SSL Secured
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z"/>
+                            </svg>
+                            24/7 Support
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-8 pt-6 border-t border-gray-300">
+                <div class="flex flex-wrap justify-between items-center gap-4">
+                    <div class="text-sm text-gray-500">
+                        <p>© 2025 <span class="font-semibold text-gray-700">Aurai Solutions</span>. All rights reserved.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-6 text-sm">
+                        <a href="privacy-policy.html" class="text-gray-500 hover:text-orange-600 transition">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="text-gray-500 hover:text-orange-600 transition">Terms of Service</a>
+                        <a href="cookie-policy.html" class="text-gray-500 hover:text-orange-600 transition">Cookie Policy</a>
+                        <a href="accessibility.html" class="text-gray-500 hover:text-orange-600 transition">Accessibility</a>
+                        <a href="sitemap.xml" class="text-gray-500 hover:text-orange-600 transition">Sitemap</a>
+                    </div>
+                </div>
+                
+                <!-- Additional Business Info -->
+                <div class="mt-4 text-xs text-gray-400 text-center">
+                    <p>Business Registration: KE-12345-2023 | Tax ID: A123456789P | Licensed AI Solutions Provider</p>
+                    <p class="mt-1">Aurai is a registered trademark. All product names, logos, and brands are property of their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

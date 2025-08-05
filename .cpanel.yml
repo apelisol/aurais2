@@ -1,0 +1,9 @@
+# cPanel Deployment Configuration
+# Deploy to /home1/stepcash/aurais/
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/stepcash/aurais/
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp .well-known $DEPLOYPATH 2>/dev/null || true

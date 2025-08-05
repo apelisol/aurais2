@@ -1,0 +1,38 @@
+{
+  "name": "faunaflora",
+  "version": "1.0.0",
+  "author": "",
+  "description": "Ukunahi AI – AI-Powered Business Automation for SMEs",
+  "scripts": {
+    "browsersync": "browser-sync start --directory --server ./public --files ./public/* --startPath index.html",
+    "clean": "rimraf public/*",
+    "copy-assets": "cpx \"src/assets/**/*.*\" public/",
+    "css-compile": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.css",
+    "css-minified": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify",
+    "css": "npm-run-all --sequential css-*",
+    "build": "npm-run-all --sequential clean copy-assets",
+    "watch": "npm-run-all build --parallel watch-css browsersync",
+    "watch-css": "tailwindcss build -i src/tailwind/tailwind.css -c src/tailwind/tailwind.config.js -o public/css/tailwind/tailwind.min.css --minify --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "cpx": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^4.1.11"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dtorredo/AI-SITE.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dtorredo/AI-SITE/issues"
+  },
+  "homepage": "https://github.com/Dtorredo/AI-SITE#readme"
+}

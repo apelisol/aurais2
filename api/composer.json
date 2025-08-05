@@ -1,0 +1,46 @@
+{
+    "name": "ukunahi-ai/backend-api",
+    "description": "PHP Backend API for Ukunahi AI - AI-Powered Business Automation for SMEs",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ukunahi AI Team",
+            "email": "dev@ukunahi.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.8",
+        "vlucas/phpdotenv": "^5.5",
+        "firebase/php-jwt": "^6.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "UkunahiAI\\": "src/",
+            "UkunahiAI\\Models\\": "models/",
+            "UkunahiAI\\Utils\\": "utils/",
+            "UkunahiAI\\Controllers\\": "controllers/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UkunahiAI\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "post-install-cmd": [
+            "php -r \"copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
