@@ -39,7 +39,7 @@ class APIClient {
      */
     async request(endpoint, options = {}) {
         const url = endpoint.startsWith('http') ? endpoint : `${this.baseURL}${endpoint}`;
-        
+
         const defaultOptions = {
             headers: {
                 'Content-Type': 'application/json',
@@ -50,46 +50,46 @@ class APIClient {
         };
 
         let lastError;
-        
+
         for (let attempt = 1; attempt <= this.retryAttempts; attempt++) {
             try {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), this.timeout);
-                
+
                 const response = await fetch(url, {
                     ...defaultOptions,
                     signal: controller.signal
                 });
-                
+
                 clearTimeout(timeoutId);
-                
+
                 const data = await response.json();
-                
+
                 if (!response.ok) {
                     throw new APIError(data.error || 'Request failed', response.status, data);
                 }
-                
+
                 return data;
-                
+
             } catch (error) {
                 lastError = error;
-                
+
                 // Don't retry on client errors (4xx) except 429 (rate limit)
                 if (error.status >= 400 && error.status < 500 && error.status !== 429) {
                     throw error;
                 }
-                
+
                 // Don't retry on the last attempt
                 if (attempt === this.retryAttempts) {
                     throw error;
                 }
-                
+
                 // Wait before retrying (exponential backoff)
                 const delay = Math.min(1000 * Math.pow(2, attempt - 1), 10000);
                 await new Promise(resolve => setTimeout(resolve, delay));
             }
         }
-        
+
         throw lastError;
     }
 
@@ -103,7 +103,7 @@ class APIClient {
                 url.searchParams.append(key, params[key]);
             }
         });
-        
+
         return this.request(url.toString(), { method: 'GET' });
     }
 
@@ -235,13 +235,13 @@ const FormValidator = {
      */
     validateRequired(data, requiredFields) {
         const errors = {};
-        
+
         requiredFields.forEach(field => {
             if (!data[field] || data[field].toString().trim() === '') {
                 errors[field] = `${field.replace('_', ' ')} is required`;
             }
         });
-        
+
         return errors;
     },
 
@@ -250,27 +250,27 @@ const FormValidator = {
      */
     validateContactForm(formData) {
         const errors = this.validateRequired(formData, ['name', 'email', 'subject', 'message']);
-        
+
         if (formData.email && !this.isValidEmail(formData.email)) {
             errors.email = 'Please enter a valid email address';
         }
-        
+
         if (formData.phone && !this.isValidPhone(formData.phone)) {
             errors.phone = 'Please enter a valid phone number';
         }
-        
+
         if (formData.name && (formData.name.length < 2 || formData.name.length > 100)) {
             errors.name = 'Name must be between 2 and 100 characters';
         }
-        
+
         if (formData.subject && (formData.subject.length < 5 || formData.subject.length > 200)) {
             errors.subject = 'Subject must be between 5 and 200 characters';
         }
-        
+
         if (formData.message && (formData.message.length < 10 || formData.message.length > 2000)) {
             errors.message = 'Message must be between 10 and 2000 characters';
         }
-        
+
         return errors;
     }
 };
